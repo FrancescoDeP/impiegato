@@ -8,7 +8,6 @@ public class Contatore {
 		contatore++;
 	}
 	
-	
 	public static int incrementaContatore() {
 		return ++contatore;
 	}

@@ -24,9 +24,10 @@ public class Impiegato {
 	
 	public int restoFerie(int ferie) {
 		if(this.ferie - ferie < 0) {
-			System.out.println("Hai richiesto un eccesso di ferie, ne hai solamente: " + this.ferie);
+			System.out.print("Hai richiesto un eccesso di ferie, ne hai solamente: ");
+			return this.ferie;
 		}else if(this.ferie - ferie == 0) {
-			System.out.println("Hai terminato le ferie");
+			System.out.println("Hai terminato i giorni di ferie, non puoi chiederne altri");
 		}
 		return this.ferie - ferie;
 	}
@@ -34,6 +35,7 @@ public class Impiegato {
 	public void diffAnzianita(Impiegato i) {
 		if(this.anzianita < i.anzianita) {
 			System.out.println(i.nome + " " + i.cognome + " Lavora da più tempo");
+			return;
 		}else if(this.anzianita > i.anzianita) {
 			System.out.println(this.nome + " " + this.cognome + " Lavora da più tempo");
 		}else {
@@ -42,9 +44,9 @@ public class Impiegato {
 	}
 	
 	public double aumentoPaga() {
-		if(this.anzianita >= 730) {
+		if(this.anzianita >= 2) {
 			return this.salario + this.salario * 10 / 100;
-		}else if(this.anzianita >= 1825) {
+		}else if(this.anzianita >= 5) {
 			return this.salario + this.salario * 15 / 100;
 		}
 		return this.salario;
