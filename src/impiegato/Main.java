@@ -10,6 +10,7 @@ public class Main {
 		Impiegato i3 = new Impiegato("Sara", "Verdi", 800, 40, 1560.30);
 		Impiegato i4 = new Impiegato("Giovanni", "Rossi", 250, 10, 1100.70);
 
+		System.out.println("FrancescoDeP");
 		//resto ferie
 		System.out.println(i1.restoFerie(10));
 		System.out.println(i2.restoFerie(10));
